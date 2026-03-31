@@ -30,13 +30,11 @@ Use the GitHub MCP tools to fetch release information for `${{ github.repository
 
 1. **Find the previous published release** — List releases for the repository. Find the most recent release that is **not a draft** and is **published** (i.e., has a `published_at` date). This is the baseline to compare against. Note its tag name.
 
-2. **Get all commits between releases** — Use `git log <prev_tag>..${{ inputs.version }} --oneline` via shell (preferred, since `list_commits` MCP tool is often filtered by integrity policy). This is the primary source of changes. Many important changes are direct commits without PRs — **do not skip them**.
+2. **Get all commits between releases** — Use `list_commits` or `git log <prev_tag>..${{ inputs.version }} --oneline` via shell to get all commits between the previous published release tag and `${{ inputs.version }}`.
 
-3. **Understand what changed** — For commits that look significant (new features, bug fixes), use `git show <sha> --stat` or read the changed files to understand the scope. Look at commit messages carefully — they describe the actual changes.
+3. **Optionally get merged PRs** — Search for merged pull requests if needed for additional context, but rely primarily on commits since not all changes go through PRs. Use the default branch (`master`), not `main`.
 
-4. **Get merged PRs** — Search for merged pull requests on the `master` branch between the two releases. Use the PR author and PR number for attribution. For commits without PRs, use the commit author and commit SHA.
-
-**IMPORTANT**: Compare against the last **published** release (e.g., v0.12.152), NOT the immediately previous tag. Many tags may be CI/infrastructure-only. The commit list is the authoritative source — PRs supplement it but many changes are direct commits.
+**IMPORTANT**: Compare against the last **published** release (e.g., v0.12.152), NOT the immediately previous tag. Many tags may be CI/infrastructure-only.
 
 ### 2. Categorize & Prioritize
 
@@ -44,7 +42,7 @@ Group changes by category (omit categories with no items):
 - **⚠️ Breaking Changes** - Requires user action (ALWAYS list first if present)
 - **✨ New Features** - User-facing capabilities
 - **🐛 Bug Fixes** - Issue resolutions
-- **🌐 Localization** - New or updated translations
+- **⚡ Performance** - Speed/efficiency improvements
 - **🔧 Internal** - Refactoring, dependencies (usually omit from highlights)
 
 Use both commit messages and PR titles to determine categories.
@@ -62,26 +60,20 @@ Structure:
 [If any - list FIRST with migration guidance]
 
 ### ✨ What's New
-- **Feature name** — short description. (#PR by @author)
+[Key features with user benefit — include author and PR link]
 
 ### 🐛 Bug Fixes & Improvements
-- **Fix name** — short description. (#PR by @author)
-
-### 🌐 Localization
-- Updated translations for [languages]. (#PR by @author)
-
-**Full Changelog**: https://github.com/${{ github.repository }}/compare/<prev_tag>...${{ inputs.version }}
+[Notable fixes — include author and PR link]
 ```
 
 **Writing Guidelines:**
-- **MAXIMUM 10-15 words per item description** — e.g. "In-place self-update with SHA256 verification and automatic rollback."
-- Do NOT write multiple sentences per item. One short phrase only.
-- Do NOT explain how features work or provide implementation details
-- **Stay faithful to commit messages** — do not embellish, infer, or add details not in the commit message. If the commit says "fix X", describe it as fixing X, not what you think it might do.
-- For each item, include the PR number and the **actual PR author** (check the PR data, not the commit author — they may differ)
-- If a change has multiple PRs, list all PR numbers: `(#42 #43 by @author)`
-- End with a Full Changelog link comparing the previous published release tag to `${{ inputs.version }}`
-- Skip the summary paragraph if there are fewer than 5 user-facing changes
+- Lead with benefits: "Driver deletion is now 2x faster" not "Optimized delete loop"
+- Be specific about what changed and why it matters to users
+- Keep it concise and scannable (users grasp key changes in 30 seconds)
+- Use professional, enthusiastic tone
+- This is a Windows desktop application — write from the end-user perspective
+- For each item, include the author and PR reference at the end, e.g.:
+  `- **In-place self-update** — description. (#42 by @username)`
 
 ### 4. Handle Special Cases
 
