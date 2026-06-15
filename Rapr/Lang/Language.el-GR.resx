@@ -273,12 +273,6 @@ Credits:
   <data name="Dialog_Export_Filters" xml:space="preserve">
     <value>Αρχεία CSV | *.csv</value>
   </data>
-  <data name="Status_Adding_Package" xml:space="preserve">
-    <value>Προσθήκη πακέτου Driver...</value>
-  </data>
-  <data name="Status_Deleting_Packages" xml:space="preserve">
-    <value>Διαγράφεται πακέτο/α Driver/s...</value>
-  </data>
   <data name="Message_Delete_Package" xml:space="preserve">
     <value>Διαγράφηκε {0} ({1}) from driver store.</value>
     <comment>{0} - Placeholder for inf package file
@@ -427,9 +421,6 @@ Credits:
   </data>
   <data name="Status_Exporting_All_Drivers" xml:space="preserve">
     <value>Εξάγονται όλοι οι Drivers ...</value>
-  </data>
-  <data name="Status_Exporting_Drivers" xml:space="preserve">
-    <value>Εξάγονται Driver(s) ...</value>
   </data>
   <data name="Button_Cancel" xml:space="preserve">
     <value>Άκυρο</value>

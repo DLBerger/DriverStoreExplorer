@@ -279,12 +279,6 @@ Lisans:
   <data name="Dialog_Export_Filters" xml:space="preserve">
     <value>CSV Dosyaları | *.csv</value>
   </data>
-  <data name="Status_Adding_Package" xml:space="preserve">
-    <value>Sürücü paketi ekleniyor...</value>
-  </data>
-  <data name="Status_Deleting_Packages" xml:space="preserve">
-    <value>Sürücü paket(ler)i siliniyor...</value>
-  </data>
   <data name="Message_Delete_Package" xml:space="preserve">
     <value>Sürücü deposundan {0} ({1}) kaldırıldı.</value>
     <comment>{0} - Placeholder for inf package file
@@ -436,9 +430,6 @@ Lisans:
   </data>
   <data name="Status_Exporting_All_Drivers" xml:space="preserve">
     <value>Tüm sürücü paketleri dışa aktarılıyor...</value>
-  </data>
-  <data name="Status_Exporting_Drivers" xml:space="preserve">
-    <value>Sürücü paket(ler)i dışa aktarılıyor...</value>
   </data>
   <data name="Button_Cancel" xml:space="preserve">
     <value>İ&amp;ptal</value>

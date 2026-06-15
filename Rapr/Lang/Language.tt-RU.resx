@@ -279,12 +279,6 @@
   <data name="Dialog_Export_Filters" xml:space="preserve">
     <value>CSV файллары | *.csv</value>
   </data>
-  <data name="Status_Adding_Package" xml:space="preserve">
-    <value>Драйвер пакетын өстәү...</value>
-  </data>
-  <data name="Status_Deleting_Packages" xml:space="preserve">
-    <value>Драйвер пакет(лар)ын бетерү...</value>
-  </data>
   <data name="Message_Delete_Package" xml:space="preserve">
     <value>{0} ({1}) драйверны саклау урыныннан бетерелде.</value>
     <comment>{0} - Placeholder for inf package file
@@ -460,9 +454,6 @@
   </data>
   <data name="Message_Export_Drivers_Success" xml:space="preserve">
     <value>Драйвер пакетларын экспортлау уңышлы.</value>
-  </data>
-  <data name="Status_Exporting_Drivers" xml:space="preserve">
-    <value>Драйвер пакет(лар)ын экспортлау...</value>
   </data>
   <data name="Menu_Options" xml:space="preserve">
     <value>Көйләүләр (&amp;O)</value>

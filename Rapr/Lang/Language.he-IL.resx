@@ -269,12 +269,6 @@
   <data name="Dialog_Export_Filters" xml:space="preserve">
     <value>CSV Files | *.csv</value>
   </data>
-  <data name="Status_Adding_Package" xml:space="preserve">
-    <value>בתהליך הוספת חבילה...</value>
-  </data>
-  <data name="Status_Deleting_Packages" xml:space="preserve">
-    <value>בתהליך מחיקת חבילות מנהל התקן...</value>
-  </data>
   <data name="Message_Delete_Package" xml:space="preserve">
     <value>{0} ‏({1}) הוסר ממאגר מנהלי ההתקנים.</value>
   </data>
@@ -428,9 +422,6 @@
   </data>
   <data name="Message_Export_Drivers_Success" xml:space="preserve">
     <value>ייצוא חבילות מנהלי ההתקנים הצליח.</value>
-  </data>
-  <data name="Status_Exporting_Drivers" xml:space="preserve">
-    <value>בתהליך ייצוא חבילות מנהל התקן...</value>
   </data>
   <data name="Column_Extension_Id" xml:space="preserve">
     <value>מזהה הרחבה</value>

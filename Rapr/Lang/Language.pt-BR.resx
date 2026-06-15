@@ -272,12 +272,6 @@ Licença:
   <data name="Dialog_Export_Filters" xml:space="preserve">
     <value>Arquivos CSV | *.csv</value>
   </data>
-  <data name="Status_Adding_Package" xml:space="preserve">
-    <value>Adicionando pacote de driver...</value>
-  </data>
-  <data name="Status_Deleting_Packages" xml:space="preserve">
-    <value>Excluindo pacote(s) de driver...</value>
-  </data>
   <data name="Message_Delete_Package" xml:space="preserve">
     <value>Removido {0} ({1}) do armazenamento de drivers.</value>
   </data>
@@ -403,9 +397,6 @@ Licença:
   </data>
   <data name="Status_Exporting_All_Drivers" xml:space="preserve">
     <value>Exportando todos os pacotes de drivers...</value>
-  </data>
-  <data name="Status_Exporting_Drivers" xml:space="preserve">
-    <value>Exportando pacote(s) de driver(s)...</value>
   </data>
   <data name="Button_Cancel" xml:space="preserve">
     <value>&amp;Cancelar</value>

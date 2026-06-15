@@ -500,48 +500,42 @@ namespace Rapr
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Design", "CA1031:Do not catch general exception types", Justification = "<Pending>")]
         private async Task DeleteDriverStorePackages(List<DriverStoreEntry> driverStoreEntries)
         {
-            StringBuilder details = new StringBuilder();
-
-            foreach (DriverStoreEntry item in driverStoreEntries)
-            {
-                details.AppendLine($"{item.DriverPublishedName} - {item.DriverFolderName} - {DriverStoreEntry.GetBytesReadable(item.DriverSize)}");
-            }
-
             bool force = this.cbForceDeletion.Checked;
 
             try
             {
                 this.StartOperation();
 
-                this.ShowStatus(
-                    Status.Normal,
-                    Language.Status_Deleting_Packages,
-                    $"{Language.Status_Deleting_Packages}{Environment.NewLine}{details.ToString().Trim()}");
-
                 (bool allSucceeded, string detailResult, List<DriverStoreEntry> allDriverStoreEntries) = await Task.Run(() =>
                 {
                     bool totalResult = true;
                     StringBuilder sb = new StringBuilder();
+                    int totalCount = driverStoreEntries.Count;
+                    int currentIndex = 0;
 
-                    if (driverStoreEntries.Count == 1)
+                    foreach (DriverStoreEntry entry in driverStoreEntries)
                     {
-                        totalResult = this.driverStore.DeleteDriver(driverStoreEntries[0], force);
-                    }
-                    else
-                    {
-                        foreach (DriverStoreEntry entry in driverStoreEntries)
+                        currentIndex++;
+                        this.ShowDriverPackageProgress(
+                            Language.Status_Deleting_Driver,
+                            currentIndex,
+                            totalCount,
+                            entry.DriverInfName);
+
+                        bool succeeded = this.driverStore.DeleteDriver(entry, force);
+                        string resultTxt = string.Format(
+                            succeeded ? Language.Message_Delete_Success : Language.Message_Delete_Fail,
+                            entry.DriverPublishedName,
+                            entry.DriverFolderName);
+
+                        Trace.TraceInformation(resultTxt);
+
+                        if (driverStoreEntries.Count > 1)
                         {
-                            bool succeeded = this.driverStore.DeleteDriver(entry, force);
-                            string resultTxt = string.Format(
-                                succeeded ? Language.Message_Delete_Success : Language.Message_Delete_Fail,
-                                entry.DriverPublishedName,
-                                entry.DriverFolderName);
-
-                            Trace.TraceInformation(resultTxt);
-
                             sb.AppendLine(resultTxt);
-                            totalResult &= succeeded;
                         }
+
+                        totalResult &= succeeded;
                     }
 
                     var updatedDriverStoreEntries = totalResult
@@ -648,7 +642,6 @@ namespace Rapr
                     try
                     {
                         this.StartOperation();
-                        this.ShowStatus(Status.Normal, Language.Status_Adding_Package);
 
                         (int addedCount, int skippedCount, int failedCount, string detailResult) = await Task.Run(() =>
                         {
@@ -656,9 +649,19 @@ namespace Rapr
                             int skipped = 0;
                             int failed = 0;
                             StringBuilder sb = new StringBuilder();
+                            int totalCount = infFiles.Count;
+                            int currentIndex = 0;
 
                             foreach (string infFile in infFiles)
                             {
+                                currentIndex++;
+                                string displayName = Path.GetFileName(infFile);
+                                this.ShowDriverPackageProgress(
+                                    Language.Status_Adding_Driver,
+                                    currentIndex,
+                                    totalCount,
+                                    displayName);
+
                                 AddDriverResult result = this.driverStore.AddDriver(infFile, installDriver);
                                 string displayPath = infFiles.Count == 1
                                     ? infPath
@@ -1189,36 +1192,28 @@ namespace Rapr
                 return;
             }
 
-            this.cbSelectWinPEDrivers.CheckedChanged -= this.CbSelectWinPEDrivers_CheckedChanged;
-            try
+            if (this.lstDriverStoreEntries.Objects == null)
             {
                 this.cbSelectWinPEDrivers.Checked = false;
-
-                if (this.lstDriverStoreEntries.Objects == null)
-                {
-                    return;
-                }
-
-                var winPEDrivers = this.lstDriverStoreEntries.Objects
-                    .OfType<DriverStoreEntry>()
-                    .Where(entry => entry.WinPEDriver == true)
-                    .ToList();
-
-                if (winPEDrivers.Count == 0)
-                {
-                    this.ShowStatus(Status.Warning, Language.Message_No_WinPE_Drivers_Found);
-                    return;
-                }
-
-                this.lstDriverStoreEntries.CheckedObjects = winPEDrivers.ToArray();
-                if (this.cbShowOnlySelectedDrivers.Checked)
-                {
-                    this.ApplyDriverListFilter();
-                }
+                return;
             }
-            finally
+
+            var winPEDrivers = this.lstDriverStoreEntries.Objects
+                .OfType<DriverStoreEntry>()
+                .Where(entry => entry.WinPEDriver == true)
+                .ToList();
+
+            if (winPEDrivers.Count == 0)
             {
-                this.cbSelectWinPEDrivers.CheckedChanged += this.CbSelectWinPEDrivers_CheckedChanged;
+                this.cbSelectWinPEDrivers.Checked = false;
+                this.ShowStatus(Status.Warning, Language.Message_No_WinPE_Drivers_Found);
+                return;
+            }
+
+            this.lstDriverStoreEntries.CheckedObjects = winPEDrivers.ToArray();
+            if (this.cbShowOnlySelectedDrivers.Checked)
+            {
+                this.ApplyDriverListFilter();
             }
         }
 
@@ -1433,6 +1428,14 @@ namespace Rapr
             Normal,
         }
 
+        private void ShowDriverPackageProgress(string statusFormat, int currentIndex, int totalCount, string displayName)
+        {
+            this.BeginInvoke((Action)(() =>
+                this.ShowStatus(
+                    Status.Normal,
+                    string.Format(statusFormat, currentIndex, totalCount, displayName))));
+        }
+
         private void ShowStatus(Status status, string text, string detail = null, bool usePopup = false)
         {
             this.lblStatus.Text = text.Replace("\r\n", "\n").Replace("\n", " ");
@@ -1545,11 +1548,11 @@ namespace Rapr
                 foreach (DriverStoreEntry entry in driverStoreEntries)
                 {
                     currentIndex++;
-                    string displayName = entry.DriverInfName;
-                    this.BeginInvoke((Action)(() =>
-                        this.ShowStatus(
-                            Status.Normal,
-                            string.Format(Language.Status_Exporting_Driver, currentIndex, totalCount, displayName))));
+                    this.ShowDriverPackageProgress(
+                        Language.Status_Exporting_Driver,
+                        currentIndex,
+                        totalCount,
+                        entry.DriverInfName);
 
                     try
                     {
@@ -1641,32 +1644,37 @@ namespace Rapr
                 if (driverStoreEntries?.Count > 0)
                 {
                     this.StartOperation();
-                    this.ShowStatus(Status.Normal, Language.Status_Exporting_Drivers);
 
                     (bool allSucceeded, string detailResult) = await Task.Run(() =>
                     {
                         bool totalResult = true;
                         StringBuilder sb = new StringBuilder();
+                        int totalCount = driverStoreEntries.Count;
+                        int currentIndex = 0;
 
-                        if (driverStoreEntries.Count == 1)
+                        foreach (DriverStoreEntry entry in driverStoreEntries)
                         {
-                            totalResult = this.driverStore.ExportDriver(driverStoreEntries[0], destinationPath);
-                        }
-                        else
-                        {
-                            foreach (DriverStoreEntry entry in driverStoreEntries)
+                            currentIndex++;
+                            this.ShowDriverPackageProgress(
+                                Language.Status_Exporting_Driver,
+                                currentIndex,
+                                totalCount,
+                                entry.DriverInfName);
+
+                            bool succeeded = this.driverStore.ExportDriver(entry, destinationPath);
+                            string resultTxt = string.Format(
+                                succeeded ? Language.Message_Export_Success : Language.Message_Export_Fail,
+                                entry.DriverPublishedName,
+                                entry.DriverFolderName);
+
+                            Trace.TraceInformation(resultTxt);
+
+                            if (driverStoreEntries.Count > 1)
                             {
-                                bool succeeded = this.driverStore.ExportDriver(entry, destinationPath);
-                                string resultTxt = string.Format(
-                                    succeeded ? Language.Message_Export_Success : Language.Message_Export_Fail,
-                                    entry.DriverPublishedName,
-                                    entry.DriverFolderName);
-
-                                Trace.TraceInformation(resultTxt);
-
                                 sb.AppendLine(resultTxt);
-                                totalResult &= succeeded;
                             }
+
+                            totalResult &= succeeded;
                         }
 
                         return (totalResult, sb.ToString());

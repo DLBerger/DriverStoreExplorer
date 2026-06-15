@@ -282,12 +282,6 @@ Licencja użytkowania:
   <data name="Dialog_Export_Filters" xml:space="preserve">
     <value>Pliki CSV | *.csv</value>
   </data>
-  <data name="Status_Adding_Package" xml:space="preserve">
-    <value>Dodawanie pakietu sterownika...</value>
-  </data>
-  <data name="Status_Deleting_Packages" xml:space="preserve">
-    <value>Usuwanie pakietów sterowników...</value>
-  </data>
   <data name="Message_Delete_Package" xml:space="preserve">
     <value>Usunięto {0} ({1}) z magazynu sterowników.</value>
     <comment>{0} - Placeholder for inf package file
@@ -439,9 +433,6 @@ Licencja użytkowania:
   </data>
   <data name="Status_Exporting_All_Drivers" xml:space="preserve">
     <value>Eksportowanie wszystkich pakietów sterowników...</value>
-  </data>
-  <data name="Status_Exporting_Drivers" xml:space="preserve">
-    <value>Eksportowanie pakietu(ów) sterowników...</value>
   </data>
   <data name="Button_Cancel" xml:space="preserve">
     <value>Anuluj</value>

@@ -1118,20 +1118,20 @@ namespace Rapr.Lang {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Adding driver package....
+        ///   Looks up a localized string similar to Adding {0} of {1}: {2}....
         /// </summary>
-        public static string Status_Adding_Package {
+        public static string Status_Adding_Driver {
             get {
-                return ResourceManager.GetString("Status_Adding_Package", resourceCulture);
+                return ResourceManager.GetString("Status_Adding_Driver", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Deleting driver package(s)....
+        ///   Looks up a localized string similar to Deleting {0} of {1}: {2}....
         /// </summary>
-        public static string Status_Deleting_Packages {
+        public static string Status_Deleting_Driver {
             get {
-                return ResourceManager.GetString("Status_Deleting_Packages", resourceCulture);
+                return ResourceManager.GetString("Status_Deleting_Driver", resourceCulture);
             }
         }
         
@@ -1150,15 +1150,6 @@ namespace Rapr.Lang {
         public static string Status_Exporting_Driver {
             get {
                 return ResourceManager.GetString("Status_Exporting_Driver", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Exporting driver package(s)....
-        /// </summary>
-        public static string Status_Exporting_Drivers {
-            get {
-                return ResourceManager.GetString("Status_Exporting_Drivers", resourceCulture);
             }
         }
         

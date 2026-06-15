@@ -280,12 +280,6 @@ Licenza:
   <data name="Dialog_Export_Filters" xml:space="preserve">
     <value>File CSV | *.csv</value>
   </data>
-  <data name="Status_Adding_Package" xml:space="preserve">
-    <value>Aggiunta driver...</value>
-  </data>
-  <data name="Status_Deleting_Packages" xml:space="preserve">
-    <value>Eliminazione driver ...</value>
-  </data>
   <data name="Message_Delete_Package" xml:space="preserve">
     <value>Eliminazione di {0} ({1}) dall'archivio driver.</value>
     <comment>{0} - Placeholder for inf package file
@@ -437,9 +431,6 @@ Licenza:
   </data>
   <data name="Status_Exporting_All_Drivers" xml:space="preserve">
     <value>Esportazione di tutti i driver...</value>
-  </data>
-  <data name="Status_Exporting_Drivers" xml:space="preserve">
-    <value>Esportazione driver...</value>
   </data>
   <data name="Button_Cancel" xml:space="preserve">
     <value>Annulla</value>

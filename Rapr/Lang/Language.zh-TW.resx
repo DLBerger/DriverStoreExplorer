@@ -279,12 +279,6 @@
   <data name="Dialog_Export_Filters" xml:space="preserve">
     <value>CSV 檔案 | *.csv</value>
   </data>
-  <data name="Status_Adding_Package" xml:space="preserve">
-    <value>正在加入驅動程式封裝…</value>
-  </data>
-  <data name="Status_Deleting_Packages" xml:space="preserve">
-    <value>正在刪除驅動程式封裝…</value>
-  </data>
   <data name="Message_Delete_Package" xml:space="preserve">
     <value>已從驅動程式存放區移除 {0} ({1})。</value>
     <comment>{0} - Placeholder for inf package file
@@ -436,9 +430,6 @@
   </data>
   <data name="Status_Exporting_All_Drivers" xml:space="preserve">
     <value>正在匯出所有驅動程式封裝…</value>
-  </data>
-  <data name="Status_Exporting_Drivers" xml:space="preserve">
-    <value>正在匯出驅動程式封裝…</value>
   </data>
   <data name="Button_Cancel" xml:space="preserve">
     <value>取消(&amp;C)</value>

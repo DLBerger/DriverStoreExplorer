@@ -275,12 +275,6 @@
   <data name="Dialog_Export_Filters" xml:space="preserve">
     <value>CSV文件 | *.csv</value>
   </data>
-  <data name="Status_Adding_Package" xml:space="preserve">
-    <value>添加驱动包...</value>
-  </data>
-  <data name="Status_Deleting_Packages" xml:space="preserve">
-    <value>删除驱动包...</value>
-  </data>
   <data name="Message_Delete_Package" xml:space="preserve">
     <value>已从驱动存储中删除{0} ({1})。</value>
   </data>
@@ -406,9 +400,6 @@
   </data>
   <data name="Status_Exporting_All_Drivers" xml:space="preserve">
     <value>导出所有驱动包...</value>
-  </data>
-  <data name="Status_Exporting_Drivers" xml:space="preserve">
-    <value>导出驱动包...</value>
   </data>
   <data name="Button_Cancel" xml:space="preserve">
     <value>取消(&amp;C)</value>

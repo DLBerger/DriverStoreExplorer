@@ -284,12 +284,6 @@ Giấy phép:
   <data name="Dialog_Export_Filters" xml:space="preserve">
     <value>Tệp CSV | *.csv</value>
   </data>
-  <data name="Status_Adding_Package" xml:space="preserve">
-    <value>Đang thêm gói driver...</value>
-  </data>
-  <data name="Status_Deleting_Packages" xml:space="preserve">
-    <value>Đang xoá các gói driver...</value>
-  </data>
   <data name="Message_Delete_Package" xml:space="preserve">
     <value>Đã xoá {0} ({1}) khỏi kho driver.</value>
     <comment>{0} - Placeholder for inf package file
@@ -441,9 +435,6 @@ Giấy phép:
   </data>
   <data name="Status_Exporting_All_Drivers" xml:space="preserve">
     <value>Đang xuất tất cả gói driver...</value>
-  </data>
-  <data name="Status_Exporting_Drivers" xml:space="preserve">
-    <value>Đang xuất gói driver...</value>
   </data>
   <data name="Button_Cancel" xml:space="preserve">
     <value>&amp;Hủy</value>

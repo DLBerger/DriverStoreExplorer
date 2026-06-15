@@ -279,12 +279,6 @@
   <data name="Dialog_Export_Filters" xml:space="preserve">
     <value>CSV 파일 | *.csv</value>
   </data>
-  <data name="Status_Adding_Package" xml:space="preserve">
-    <value>드라이버 패키지 추가 중...</value>
-  </data>
-  <data name="Status_Deleting_Packages" xml:space="preserve">
-    <value>드라이버 패키지 삭제 중...</value>
-  </data>
   <data name="Message_Delete_Package" xml:space="preserve">
     <value>드라이버 저장소에서 {0} ({1})를 제거했습니다.</value>
     <comment>{0} - inf 패키지 파일에 대한 자리 표시자
@@ -448,9 +442,6 @@
   </data>
   <data name="Status_Exporting_All_Drivers" xml:space="preserve">
     <value>모든 드라이버 패키지를 내보내는 중...</value>
-  </data>
-  <data name="Status_Exporting_Drivers" xml:space="preserve">
-    <value>드라이버 패키지를 내보내는 중...</value>
   </data>
   <data name="Button_Cancel" xml:space="preserve">
     <value>취소(&amp;C)</value>

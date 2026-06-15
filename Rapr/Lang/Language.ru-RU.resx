@@ -279,12 +279,6 @@
   <data name="Dialog_Export_Filters" xml:space="preserve">
     <value>CSV-файлы | *.csv</value>
   </data>
-  <data name="Status_Adding_Package" xml:space="preserve">
-    <value>Добавление пакета драйверов...</value>
-  </data>
-  <data name="Status_Deleting_Packages" xml:space="preserve">
-    <value>Удаление пакета(ов) драйверов...</value>
-  </data>
   <data name="Message_Delete_Package" xml:space="preserve">
     <value>Удален {0} ({1}) из хранилища драйверов.</value>
     <comment>{0} - Placeholder для inf-файла пакета драйверов
@@ -436,9 +430,6 @@
   </data>
   <data name="Status_Exporting_All_Drivers" xml:space="preserve">
     <value>Экспорт всех пакетов драйверов...</value>
-  </data>
-  <data name="Status_Exporting_Drivers" xml:space="preserve">
-    <value>Экспорт пакета(ов) драйверов...</value>
   </data>
   <data name="Button_Cancel" xml:space="preserve">
     <value>&amp;Отмена</value>

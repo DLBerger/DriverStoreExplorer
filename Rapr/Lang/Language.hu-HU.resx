@@ -279,12 +279,6 @@ Licensz:
   <data name="Dialog_Export_Filters" xml:space="preserve">
     <value>CSV fájlok | *.csv</value>
   </data>
-  <data name="Status_Adding_Package" xml:space="preserve">
-    <value>Illesztőprogram-csomag hozzáadása ...</value>
-  </data>
-  <data name="Status_Deleting_Packages" xml:space="preserve">
-    <value>Illesztőprogram-csomag(ok) törlése...</value>
-  </data>
   <data name="Message_Delete_Package" xml:space="preserve">
     <value>Eltávolítottuk {0} ({1}) az illesztőprogramtárból.</value>
     <comment>{0} - Placeholder for inf package file
@@ -436,9 +430,6 @@ Licensz:
   </data>
   <data name="Status_Exporting_All_Drivers" xml:space="preserve">
     <value>Az összes illesztőprogram-csomag exportálása...</value>
-  </data>
-  <data name="Status_Exporting_Drivers" xml:space="preserve">
-    <value>Illesztőprogram-csomag(ok) exportálása...</value>
   </data>
   <data name="Button_Cancel" xml:space="preserve">
     <value>&amp;Mégse</value>

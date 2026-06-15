@@ -285,11 +285,13 @@ License:
   <data name="Dialog_Export_Filters" xml:space="preserve">
     <value>CSV Files | *.csv</value>
   </data>
-  <data name="Status_Adding_Package" xml:space="preserve">
-    <value>Adding driver package...</value>
+  <data name="Status_Adding_Driver" xml:space="preserve">
+    <value>Adding {0} of {1}: {2}...</value>
+    <comment>{0} - Current package number, {1} - Total packages, {2} - Driver package name</comment>
   </data>
-  <data name="Status_Deleting_Packages" xml:space="preserve">
-    <value>Deleting driver package(s)...</value>
+  <data name="Status_Deleting_Driver" xml:space="preserve">
+    <value>Deleting {0} of {1}: {2}...</value>
+    <comment>{0} - Current package number, {1} - Total packages, {2} - Driver package name</comment>
   </data>
   <data name="Message_Delete_Package" xml:space="preserve">
     <value>Removed {0} ({1}) from driver store.</value>
@@ -458,9 +460,6 @@ License:
   <data name="Status_Exporting_Driver" xml:space="preserve">
     <value>Exporting {0} of {1}: {2}...</value>
     <comment>{0} - Current package number, {1} - Total packages, {2} - Driver package name</comment>
-  </data>
-  <data name="Status_Exporting_Drivers" xml:space="preserve">
-    <value>Exporting driver package(s)...</value>
   </data>
   <data name="Button_Cancel" xml:space="preserve">
     <value>&amp;Cancel</value>

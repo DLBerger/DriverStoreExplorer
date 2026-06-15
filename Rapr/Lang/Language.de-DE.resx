@@ -279,12 +279,6 @@ Lizenz:
   <data name="Dialog_Export_Filters" xml:space="preserve">
     <value>CSV-Dateien | *.csv</value>
   </data>
-  <data name="Status_Adding_Package" xml:space="preserve">
-    <value>Treiberpaket wird hinzugefügt...</value>
-  </data>
-  <data name="Status_Deleting_Packages" xml:space="preserve">
-    <value>Lösche Treiberpaket(e)...</value>
-  </data>
   <data name="Message_Delete_Package" xml:space="preserve">
     <value>{0} ({1}) wurde aus dem Driver Store gelöscht.</value>
     <comment>{0} – Platzhalter für die INF-Paketdatei
@@ -436,9 +430,6 @@ Lizenz:
   </data>
   <data name="Status_Exporting_All_Drivers" xml:space="preserve">
     <value>Alle Treiberpakete werden exportiert...</value>
-  </data>
-  <data name="Status_Exporting_Drivers" xml:space="preserve">
-    <value>Treiberpaket(e) werden exportiert...</value>
   </data>
   <data name="Button_Cancel" xml:space="preserve">
     <value>Abbre&amp;chen</value>

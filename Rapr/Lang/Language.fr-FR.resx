@@ -279,12 +279,6 @@ Licence :
   <data name="Dialog_Export_Filters" xml:space="preserve">
     <value>Fichiers CSV | *.csv</value>
   </data>
-  <data name="Status_Adding_Package" xml:space="preserve">
-    <value>Ajout du package de pilote en cours...</value>
-  </data>
-  <data name="Status_Deleting_Packages" xml:space="preserve">
-    <value>Suppression du(des) package(s) de pilotes en cours...</value>
-  </data>
   <data name="Message_Delete_Package" xml:space="preserve">
     <value>{0} ({1}) supprimé du magasin de pilotes.</value>
     <comment>{0} - Correspond au fichier INF du package
@@ -436,9 +430,6 @@ Licence :
   </data>
   <data name="Status_Exporting_All_Drivers" xml:space="preserve">
     <value>Exportation de tous les packages de pilotes en cours...</value>
-  </data>
-  <data name="Status_Exporting_Drivers" xml:space="preserve">
-    <value>Exportation du(des) package(s) de pilotes en cours...</value>
   </data>
   <data name="Button_Cancel" xml:space="preserve">
     <value>&amp;Annuler</value>

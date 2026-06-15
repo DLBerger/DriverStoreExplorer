@@ -264,12 +264,6 @@ https://github.com/lostindark/DriverStoreExplorer/blob/master/LICENSE</value>
   <data name="Dialog_Export_Filters" xml:space="preserve">
     <value>CSV ملفات | *.csv</value>
   </data>
-  <data name="Status_Adding_Package" xml:space="preserve">
-    <value>إضافة تعريف...</value>
-  </data>
-  <data name="Status_Deleting_Packages" xml:space="preserve">
-    <value>حذف التعريفات...</value>
-  </data>
   <data name="Message_Delete_Package" xml:space="preserve">
     <value>تم حذف {0} ({1}) من مستودع التعريفات.</value>
   </data>
@@ -408,9 +402,6 @@ https://github.com/lostindark/DriverStoreExplorer/blob/master/LICENSE</value>
   </data>
   <data name="Message_Export_Drivers_Success" xml:space="preserve">
     <value>تم تصدير حزم التعريفات بنجاح.</value>
-  </data>
-  <data name="Status_Exporting_Drivers" xml:space="preserve">
-    <value>تصدير حزم التعريفات...</value>
   </data>
   <data name="Button_Cancel" xml:space="preserve">
     <value>إلغاء</value>

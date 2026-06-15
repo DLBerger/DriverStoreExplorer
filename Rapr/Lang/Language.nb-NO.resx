@@ -279,12 +279,6 @@ Lisens:
   <data name="Dialog_Export_Filters" xml:space="preserve">
     <value>CSV-filer | *.csv</value>
   </data>
-  <data name="Status_Adding_Package" xml:space="preserve">
-    <value>Legger til driverpakke ...</value>
-  </data>
-  <data name="Status_Deleting_Packages" xml:space="preserve">
-    <value>Sletter driverpakke(r) ...</value>
-  </data>
   <data name="Message_Delete_Package" xml:space="preserve">
     <value>Fjernet {0} ({1}) fra driverlageret.</value>
     <comment>{0} - Placeholder for inf package file
@@ -436,9 +430,6 @@ Lisens:
   </data>
   <data name="Status_Exporting_All_Drivers" xml:space="preserve">
     <value>Eksporterer alle driverpakker ...</value>
-  </data>
-  <data name="Status_Exporting_Drivers" xml:space="preserve">
-    <value>Eksporterer driverpakke(r) ...</value>
   </data>
   <data name="Button_Cancel" xml:space="preserve">
     <value>&amp;Avbryt</value>

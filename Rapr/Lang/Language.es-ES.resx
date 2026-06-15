@@ -270,12 +270,6 @@ Licencia:
   <data name="Dialog_Export_Filters" xml:space="preserve">
     <value>Archivos CSV | *.csv</value>
   </data>
-  <data name="Status_Adding_Package" xml:space="preserve">
-    <value>Agregando paquete de controlador...</value>
-  </data>
-  <data name="Status_Deleting_Packages" xml:space="preserve">
-    <value>Borrando paquete(es) de controlador(es)...</value>
-  </data>
   <data name="Message_Delete_Package" xml:space="preserve">
     <value>Borrados {0} ({1}) del almacén de controladores.</value>
     <comment>{0} - Placeholder for inf package file
@@ -421,9 +415,6 @@ Licencia:
   </data>
   <data name="Status_Exporting_All_Drivers" xml:space="preserve">
     <value>Exportando todos los paquetes de controladores...</value>
-  </data>
-  <data name="Status_Exporting_Drivers" xml:space="preserve">
-    <value>Exportando parquete(es) de controlador(es)...</value>
   </data>
   <data name="Button_Cancel" xml:space="preserve">
     <value>&amp;Cancelar</value>

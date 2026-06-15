@@ -279,12 +279,6 @@
   <data name="Dialog_Export_Filters" xml:space="preserve">
     <value>Файли CSV | *.csv</value>
   </data>
-  <data name="Status_Adding_Package" xml:space="preserve">
-    <value>Додавання пакета драйверів...</value>
-  </data>
-  <data name="Status_Deleting_Packages" xml:space="preserve">
-    <value>Видалення пакета драйверів...</value>
-  </data>
   <data name="Message_Delete_Package" xml:space="preserve">
     <value>{0} ({1}) видалено зі сховища драйверів.</value>
     <comment>{0} - Заповнювач для файлу INF пакета драйверів
@@ -436,9 +430,6 @@
   </data>
   <data name="Status_Exporting_All_Drivers" xml:space="preserve">
     <value>Експортування усіх пакетів драйверів...</value>
-  </data>
-  <data name="Status_Exporting_Drivers" xml:space="preserve">
-    <value>Експортування пакетів драйверів...</value>
   </data>
   <data name="Button_Cancel" xml:space="preserve">
     <value>Скасувати</value>

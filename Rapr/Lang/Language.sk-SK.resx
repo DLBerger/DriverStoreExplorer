@@ -279,12 +279,6 @@ Licencia:
   <data name="Dialog_Export_Filters" xml:space="preserve">
     <value>CSV súbory | *.csv</value>
   </data>
-  <data name="Status_Adding_Package" xml:space="preserve">
-    <value>Pridáva sa balík ovládača...</value>
-  </data>
-  <data name="Status_Deleting_Packages" xml:space="preserve">
-    <value>Odstraňujú sa balíky ovládača(ov)...</value>
-  </data>
   <data name="Message_Delete_Package" xml:space="preserve">
     <value>Odstránených {0} ({1}) z úložiska ovládačov.</value>
     <comment>{0} - Placeholder for inf package file
@@ -436,9 +430,6 @@ Licencia:
   </data>
   <data name="Status_Exporting_All_Drivers" xml:space="preserve">
     <value>Exportovanie všetkých balíkov ovládačov...</value>
-  </data>
-  <data name="Status_Exporting_Drivers" xml:space="preserve">
-    <value>Exportovanie balíka(ov) ovládačov...</value>
   </data>
   <data name="Button_Cancel" xml:space="preserve">
     <value>&amp;Zrušiť</value>
