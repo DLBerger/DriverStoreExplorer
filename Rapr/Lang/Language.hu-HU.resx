@@ -428,9 +428,7 @@ Licensz:
   <data name="Message_Export_Drivers_Success" xml:space="preserve">
     <value>Az Illesztőprogram-csomagok exportálása sikerült.</value>
   </data>
-  <data name="Status_Exporting_All_Drivers" xml:space="preserve">
-    <value>Az összes illesztőprogram-csomag exportálása...</value>
-  </data>
+  
   <data name="Button_Cancel" xml:space="preserve">
     <value>&amp;Mégse</value>
   </data>

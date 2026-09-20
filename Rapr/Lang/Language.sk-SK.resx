@@ -428,9 +428,7 @@ Licencia:
   <data name="Message_Export_Drivers_Success" xml:space="preserve">
     <value>Export balíkov ovládačov uspel.</value>
   </data>
-  <data name="Status_Exporting_All_Drivers" xml:space="preserve">
-    <value>Exportovanie všetkých balíkov ovládačov...</value>
-  </data>
+  
   <data name="Button_Cancel" xml:space="preserve">
     <value>&amp;Zrušiť</value>
   </data>

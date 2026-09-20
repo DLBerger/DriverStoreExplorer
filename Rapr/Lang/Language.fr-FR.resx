@@ -428,9 +428,7 @@ Licence :
   <data name="Message_Export_Drivers_Success" xml:space="preserve">
     <value>Exportation des packages de pilotes réussie.</value>
   </data>
-  <data name="Status_Exporting_All_Drivers" xml:space="preserve">
-    <value>Exportation de tous les packages de pilotes en cours...</value>
-  </data>
+  
   <data name="Button_Cancel" xml:space="preserve">
     <value>&amp;Annuler</value>
   </data>

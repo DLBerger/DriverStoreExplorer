@@ -413,9 +413,7 @@ Licencia:
   <data name="Message_Export_Drivers_Success" xml:space="preserve">
     <value>Exportación de paquetes de controladores lograda.</value>
   </data>
-  <data name="Status_Exporting_All_Drivers" xml:space="preserve">
-    <value>Exportando todos los paquetes de controladores...</value>
-  </data>
+  
   <data name="Button_Cancel" xml:space="preserve">
     <value>&amp;Cancelar</value>
   </data>

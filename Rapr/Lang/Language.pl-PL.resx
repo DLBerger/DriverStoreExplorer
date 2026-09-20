@@ -431,9 +431,7 @@ Licencja użytkowania:
   <data name="Message_Export_Drivers_Success" xml:space="preserve">
     <value>Eksport pakietów sterowników powiódł się.</value>
   </data>
-  <data name="Status_Exporting_All_Drivers" xml:space="preserve">
-    <value>Eksportowanie wszystkich pakietów sterowników...</value>
-  </data>
+  
   <data name="Button_Cancel" xml:space="preserve">
     <value>Anuluj</value>
   </data>

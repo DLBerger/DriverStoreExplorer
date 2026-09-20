@@ -374,9 +374,7 @@
   <data name="Message_Export_All_Drivers_Success" xml:space="preserve">
     <value>ייצוא כל חבילות מנהלי ההתקנים הצליח.</value>
   </data>
-  <data name="Status_Exporting_All_Drivers" xml:space="preserve">
-    <value>בתהליך ייצוא כל חבילות מנהלי ההתקנים...</value>
-  </data>
+  
   <data name="Button_Cancel" xml:space="preserve">
     <value>&amp;ביטול</value>
   </data>

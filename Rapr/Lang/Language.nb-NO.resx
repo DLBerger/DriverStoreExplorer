@@ -428,9 +428,7 @@ Lisens:
   <data name="Message_Export_Drivers_Success" xml:space="preserve">
     <value>Eksporteringen av driverpakker var vellykket.</value>
   </data>
-  <data name="Status_Exporting_All_Drivers" xml:space="preserve">
-    <value>Eksporterer alle driverpakker ...</value>
-  </data>
+  
   <data name="Button_Cancel" xml:space="preserve">
     <value>&amp;Avbryt</value>
   </data>

@@ -419,9 +419,7 @@ Credits:
   <data name="Message_Export_Drivers_Success" xml:space="preserve">
     <value>Η Εξαγωγή των Drivers ήταν επιτυχής.</value>
   </data>
-  <data name="Status_Exporting_All_Drivers" xml:space="preserve">
-    <value>Εξάγονται όλοι οι Drivers ...</value>
-  </data>
+  
   <data name="Button_Cancel" xml:space="preserve">
     <value>Άκυρο</value>
   </data>

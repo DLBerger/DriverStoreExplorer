@@ -428,9 +428,7 @@
   <data name="Message_Export_Drivers_Success" xml:space="preserve">
     <value>Успішно експортовано пакети драйверів.</value>
   </data>
-  <data name="Status_Exporting_All_Drivers" xml:space="preserve">
-    <value>Експортування усіх пакетів драйверів...</value>
-  </data>
+  
   <data name="Button_Cancel" xml:space="preserve">
     <value>Скасувати</value>
   </data>

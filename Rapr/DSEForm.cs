@@ -928,8 +928,8 @@ namespace Rapr
                 }
 
                 var driverGroups = queryEntries
-                    .Where(entry => entry.DriverInfName != "ntprint.inf")
-                    .GroupBy(entry => new { entry.DriverClass, entry.DriverExtensionId, entry.DriverPkgProvider, entry.DriverInfName })
+                    .Where(entry => !string.Equals(entry.DriverInfName, "ntprint.inf", StringComparison.OrdinalIgnoreCase))
+                    .GroupBy(entry => new { entry.DriverClass, entry.DriverExtensionId, entry.DriverPkgProvider, DriverInfNameLower = entry.DriverInfName.ToLowerInvariant() })
                     .Select(drivers => drivers
                         .GroupBy(entry => new { entry.DriverVersion, entry.DriverDate })
                         .OrderByDescending(g => g.Key.DriverVersion)
@@ -1533,17 +1533,40 @@ namespace Rapr
         {
             return await Task.Run(() =>
             {
-                if (!this.driverStore.SupportExportDriver)
-                {
-                    this.BeginInvoke((Action)(() =>
-                        this.ShowStatus(Status.Normal, Language.Status_Exporting_All_Drivers)));
-                    return this.driverStore.ExportAllDrivers(destinationPath);
-                }
-
                 var driverStoreEntries = this.driverStore.EnumeratePackages();
                 bool allSucceeded = true;
                 int totalCount = driverStoreEntries.Count;
                 int currentIndex = 0;
+
+                if (!this.driverStore.SupportExportDriver)
+                {
+                    // Bulk export path — show per-driver progress instead of a single status message
+                    foreach (DriverStoreEntry entry in driverStoreEntries)
+                    {
+                        currentIndex++;
+                        this.ShowDriverPackageProgress(
+                            Language.Status_Exporting_Driver,
+                            currentIndex,
+                            totalCount,
+                            entry.DriverInfName);
+
+                        try
+                        {
+                            if (!this.driverStore.ExportDriver(entry, destinationPath))
+                            {
+                                Trace.TraceError($"Failed to export driver package '{entry.DriverInfName}'.");
+                                allSucceeded = false;
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            Trace.TraceError($"Failed to export driver package '{entry.DriverInfName}': {ex}");
+                            allSucceeded = false;
+                        }
+                    }
+
+                    return allSucceeded;
+                }
 
                 foreach (DriverStoreEntry entry in driverStoreEntries)
                 {

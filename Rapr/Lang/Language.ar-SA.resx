@@ -370,9 +370,7 @@ https://github.com/lostindark/DriverStoreExplorer/blob/master/LICENSE</value>
   <data name="Message_Export_All_Drivers_Success" xml:space="preserve">
     <value>تم تصدير جميع التعريفات.</value>
   </data>
-  <data name="Status_Exporting_All_Drivers" xml:space="preserve">
-    <value>تصدير جميع التعريفات...</value>
-  </data>
+  
   <data name="Menu_Options_IncludeBootCritical" xml:space="preserve">
     <value>تضمين برامج التشغيل المهمة للإقلاع في برامج التشغيل القديمة</value>
   </data>

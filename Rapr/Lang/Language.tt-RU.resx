@@ -406,9 +406,7 @@
   <data name="Message_Export_All_Drivers_Success" xml:space="preserve">
     <value>Барлык драйвер пакетлары экспортланды.</value>
   </data>
-  <data name="Status_Exporting_All_Drivers" xml:space="preserve">
-    <value>Барлык драйвер пакетларны экспортлау...</value>
-  </data>
+  
   <data name="Button_Cancel" xml:space="preserve">
     <value>Баш тарту (&amp;C)</value>
   </data>

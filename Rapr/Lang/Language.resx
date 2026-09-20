@@ -454,9 +454,6 @@ License:
   <data name="Message_Export_Drivers_Success" xml:space="preserve">
     <value>Export driver packages succeeded.</value>
   </data>
-  <data name="Status_Exporting_All_Drivers" xml:space="preserve">
-    <value>Exporting all driver packages...</value>
-  </data>
   <data name="Status_Exporting_Driver" xml:space="preserve">
     <value>Exporting {0} of {1}: {2}...</value>
     <comment>{0} - Current package number, {1} - Total packages, {2} - Driver package name</comment>

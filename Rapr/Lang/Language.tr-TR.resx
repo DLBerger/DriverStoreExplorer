@@ -428,9 +428,7 @@ Lisans:
   <data name="Message_Export_Drivers_Success" xml:space="preserve">
     <value>Sürücü paketlerini dışa aktarma başarılı oldu.</value>
   </data>
-  <data name="Status_Exporting_All_Drivers" xml:space="preserve">
-    <value>Tüm sürücü paketleri dışa aktarılıyor...</value>
-  </data>
+  
   <data name="Button_Cancel" xml:space="preserve">
     <value>İ&amp;ptal</value>
   </data>

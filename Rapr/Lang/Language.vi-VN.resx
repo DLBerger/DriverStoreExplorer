@@ -433,9 +433,7 @@ Giấy phép:
   <data name="Message_Export_Drivers_Success" xml:space="preserve">
     <value>Xuất gói driver thành công.</value>
   </data>
-  <data name="Status_Exporting_All_Drivers" xml:space="preserve">
-    <value>Đang xuất tất cả gói driver...</value>
-  </data>
+  
   <data name="Button_Cancel" xml:space="preserve">
     <value>&amp;Hủy</value>
   </data>

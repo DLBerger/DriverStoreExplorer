@@ -428,9 +428,7 @@
   <data name="Message_Export_Drivers_Success" xml:space="preserve">
     <value>ドライバー パッケージのエクスポートに成功しました。</value>
   </data>
-  <data name="Status_Exporting_All_Drivers" xml:space="preserve">
-    <value>すべてのドライバー パッケージをエクスポートしています...</value>
-  </data>
+  
   <data name="Button_Cancel" xml:space="preserve">
     <value>キャンセル(&amp;C)</value>
   </data>

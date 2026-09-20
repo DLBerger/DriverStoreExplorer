@@ -1136,15 +1136,6 @@ namespace Rapr.Lang {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exporting all driver packages....
-        /// </summary>
-        public static string Status_Exporting_All_Drivers {
-            get {
-                return ResourceManager.GetString("Status_Exporting_All_Drivers", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Exporting {0} of {1}: {2}....
         /// </summary>
         public static string Status_Exporting_Driver {

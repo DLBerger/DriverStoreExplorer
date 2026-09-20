@@ -428,9 +428,7 @@
   <data name="Message_Export_Drivers_Success" xml:space="preserve">
     <value>匯出驅動程式封裝成功。</value>
   </data>
-  <data name="Status_Exporting_All_Drivers" xml:space="preserve">
-    <value>正在匯出所有驅動程式封裝…</value>
-  </data>
+  
   <data name="Button_Cancel" xml:space="preserve">
     <value>取消(&amp;C)</value>
   </data>

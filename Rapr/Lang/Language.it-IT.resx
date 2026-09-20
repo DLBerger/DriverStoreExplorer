@@ -429,9 +429,7 @@ Licenza:
   <data name="Message_Export_Drivers_Success" xml:space="preserve">
     <value>Esportazione driver completata.</value>
   </data>
-  <data name="Status_Exporting_All_Drivers" xml:space="preserve">
-    <value>Esportazione di tutti i driver...</value>
-  </data>
+  
   <data name="Button_Cancel" xml:space="preserve">
     <value>Annulla</value>
   </data>
