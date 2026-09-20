@@ -359,7 +359,7 @@ License:
     <value>Offline Driver Store</value>
   </data>
   <data name="ChooseDriverStore_Title" xml:space="preserve">
-    <value>&amp;Choose Driver Store</value>
+    <value>Choose Driver Store</value>
   </data>
   <data name="Menu_Language" xml:space="preserve">
     <value>&amp;Language</value>
