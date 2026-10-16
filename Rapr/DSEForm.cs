@@ -68,6 +68,7 @@ namespace Rapr
                     MessageBoxIcon.Information);
 
                 Application.Exit();
+                return;
             }
 
             if (!DSEFormHelper.IsRunAsAdmin)

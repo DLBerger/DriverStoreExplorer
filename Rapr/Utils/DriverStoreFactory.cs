@@ -118,10 +118,23 @@ namespace Rapr.Utils
         /// </summary>
         public static void MigrateDriverStoreSettings()
         {
-            // Check if we need to migrate from the old UseNativeDriverStore setting
-            // We only migrate if DriverStoreOption is still at its default value (0 = Native)
-            // and the old setting exists with a non-default value
-            bool useNativeDriverStore = Properties.Settings.Default.UseNativeDriverStore;
+            // Only migrate from the legacy UseNativeDriverStore boolean when DriverStoreOption
+            // is still the default (Native) or unset. An explicit DISM/PnpUtil choice must be kept.
+            bool useNativeDriverStore = Settings.Default.UseNativeDriverStore;
+            bool hasExplicitOption = Enum.TryParse(Settings.Default.DriverStoreOption, out DriverStoreOption existingOption)
+                && Enum.IsDefined(typeof(DriverStoreOption), existingOption)
+                && !string.IsNullOrWhiteSpace(Settings.Default.DriverStoreOption);
+
+            if (hasExplicitOption && existingOption != DriverStoreOption.Native)
+            {
+                Trace.TraceInformation($"Skipping UseNativeDriverStore migration; DriverStoreOption already {existingOption}");
+                return;
+            }
+
+            if (hasExplicitOption && existingOption == DriverStoreOption.Native && useNativeDriverStore)
+            {
+                return;
+            }
 
             DriverStoreOption newOption = (useNativeDriverStore && DSEFormHelper.IsNativeDriverStoreSupported)
                 ? DriverStoreOption.Native
@@ -129,7 +142,7 @@ namespace Rapr.Utils
                     ? DriverStoreOption.DISM
                     : DriverStoreOption.PnpUtil;
 
-            Properties.Settings.Default.DriverStoreOption = newOption.ToString();
+            Settings.Default.DriverStoreOption = newOption.ToString();
 
             Trace.TraceInformation($"Migrated UseNativeDriverStore setting: {useNativeDriverStore} -> DriverStoreOption: {newOption}");
         }
